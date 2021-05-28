@@ -5,8 +5,8 @@ LiquidCrystal_I2C lcd(0x27,16,2);  //sometimes the adress is not 0x3f. Change to
 #include "max6675.h"
 #include <SPI.h>
 
-#define thermoCS   10
-#define thermoDO   12
+#define thermoCS   12
+#define thermoDO   10
 #define thermoCLK  13
 MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
 

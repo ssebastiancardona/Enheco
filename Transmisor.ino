@@ -1,4 +1,3 @@
-
 ////Variables lectura termocupla
 unsigned long currentMillis = millis();
 unsigned long previousMillis = 0;
@@ -15,7 +14,7 @@ struct servoMoveMessage message;
 
 void sendStructure(byte *structurePointer, int structureLength)
 {
-  digitalWrite(21, LOW);
+  digitalWrite(15, LOW);
 
   digitalWrite(20, LOW);
   delay(10);
@@ -23,7 +22,7 @@ void sendStructure(byte *structurePointer, int structureLength)
 
   Serial3.write(structurePointer, structureLength);
 
-  digitalWrite(21, HIGH);
+  digitalWrite(15, HIGH);
 }
 
 void recieveStructure(byte *structurePointer, int structureLength)
@@ -44,8 +43,8 @@ void setup()
   pinMode(20, OUTPUT);    //Trigger Control pin
   digitalWrite(20, HIGH);
 
-  pinMode(21, OUTPUT);
-  digitalWrite(21, HIGH);
+  pinMode(15, OUTPUT);
+  digitalWrite(15, HIGH);
   message.servoNum = 10;
   message.positionGoal = 1200;
   message.interval = 2.5;
@@ -64,7 +63,6 @@ void envioDatos()
   unsigned long currentMillis = millis();
   if ((currentMillis - previousMillis >= TiempoCiclo))
   {
-    previousMillis = currentMillis;
-    
+    previousMillis = currentMillis;    
   }
 }
