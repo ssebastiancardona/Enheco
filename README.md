@@ -41,6 +41,8 @@ V-1.0.1
 2259@holbertonschool.com
 Colombia 
 
+https://www.linkedin.com/in/sebasti%C3%A1n-cardona/
+
 ## License
 
 licencia de uso bajo autorizacion
